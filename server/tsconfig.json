@@ -1,0 +1,38 @@
+// {
+//   "compilerOptions": {
+//     "module": "ESNext", 
+//     "target": "ESNext", 
+//     "lib": ["ESNext", "DOM"],
+//     "moduleResolution": "node",
+//     "jsx": "react-jsx",
+//     "strict": true,
+//     "esModuleInterop": true, 
+//     "skipLibCheck": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "noEmit": true
+//   },
+//   "include": ["**/*"],
+//   "exclude": ["node_modules"]
+// }
+
+
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"]
+  },
+  "include": ["**/*.ts", ".env"],
+  "exclude": ["node_modules", "dist"]
+}
