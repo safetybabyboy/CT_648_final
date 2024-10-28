@@ -7,27 +7,27 @@
 <img src="./images/1.jpg" width="50%" height="50%">
 
 ### รายละเอียด
-<img src="./images/2.jpg" width="50%" height="50%">
+<img src="./images/2.JPG" width="50%" height="50%">
 หน้า Homepage ที่มี Link ไปที่หน้า Login และ Create account
 
 
-<img src="./images/4.jpg" width="50%" height="50%">
+<img src="./images/4.JPG" width="50%" height="50%">
 หน้า Create account ส่ง Api ไปที่ server เพื่อตรวจสอบข้อมูลซ้ำและบันทึกข้อมูลสมาชิกลงไปในฐานข้อมูล(username, email และ password) มี Link ไปที่หน้า Login และ link บน navbar สำหรับกลับไปหน้า Homepage
 
 
-<img src="./images/3.jpg" width="50%" height="50%">
+<img src="./images/3.JPG" width="50%" height="50%">
 หน้า Login ตรวจสอบข้อมูลสมาชิกโดยการส่ง Api ไปให้ server ตรวจสอบข้อมูลสมาชิกในฐานข้อมูล(username และ password) เมื่อ Login สำเร็จ(username และ password ตรงกับข้อมูลสมาชิกที่มีอยู่ในฐานข้อมูลสมาชิก)ระบบจะส่งไปที่หน้า Lobby พร้อมทั้งส่งข้อมูลชื่อผู้ใช้ มี Link ไปที่หน้า Create account และ link บน navbar สำหรับกลับไปหน้า Homepage
 
 
-<img src="./images/5.jpg" width="50%" height="50%">
+<img src="./images/5.JPG" width="50%" height="50%">
 หน้า Lobby เป็นหน้าสำหรับสมาชิกที่ผ่านการ Login เข้ามา มี link ไปที่หน้า snakegame มี navbar ที่มีชื่อสมาชิกแสดงที่ด้านซ้ายและ Link ไปหน้า statistics และ Logout(ออกจากระบบและกลับไปที่หน้า Homepage)
 
 
-<img src="./images/6.jpg" width="50%" height="50%">
+<img src="./images/6.JPG" width="50%" height="50%">
 หน้า snakegame เป็นหน้าสำหรับเล่นเกม เมื่อเล่นเกมจบ(Gameover) จะส่ง Api ไปที่ server เพื่อบันทึกสถิติการเล่น(username score, time, date) มี navbar ที่มีชื่อสมาชิกแสดงที่ด้านซ้ายและ Link ไปหน้า statistics และ Logout(ออกจากระบบและกลับไปที่หน้า Homepage)
 
 
-<img src="./images/7.jpg" width="50%" height="50%">
+<img src="./images/7.JPG" width="50%" height="50%">
 หน้า statistics เป็นหน้าสำหรับดูข้อมูลสถิติการเล่นของ user โดยจะส่ง Api ไปที่ server เพื่อขอข้อมูลสถิติการเล่นที่บันทึกไว้(username score, time, date) มาโชว์บนตาราง มี link กลับไปที่หน้า lobby และมี navbar ที่มีชื่อสมาชิกแสดงที่ด้านซ้ายและ Link ไปหน้า statistics และ Logout(ออกจากระบบและกลับไปที่หน้า Homepage)
 
 
