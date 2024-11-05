@@ -28,7 +28,7 @@ export default function About() {
       {/* About Content */}
       <div 
       style={{
-        marginTop: '5000px', 
+        marginTop: '5100px', 
         padding: '20px', 
         maxWidth: '1200px', 
         lineHeight: '1.6', 
@@ -103,6 +103,19 @@ export default function About() {
             <li>รัน Docker: <code>docker-compose up --build</code></li>
           </ol>
         </section>
+
+        {/* GitHub Link Section */}
+        <div style={{ textAlign: 'center', marginTop: '30px' }}>
+          <h2>ดูรายละเอียดเพิ่มเติมได้ที่ GitHub:</h2>
+          <a
+            href="https://github.com/safetybabyboy/CT_648_final.git"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#333', fontWeight: 'bold', textDecoration: 'none' }}
+          >
+            https://github.com/safetybabyboy/CT_648_final.git
+          </a>
+        </div>
       </div>
     </>
   );
