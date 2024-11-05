@@ -68,9 +68,9 @@ button:hover {
 }
 
 .snake-head {
-  background-color: yellow; /* สีของหัวงู */
+  background-color: yellow;
 }
 
 .snake-tail {
-  background-color: green; /* สีของตัวงู */
+  background-color: green;
 }

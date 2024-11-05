@@ -6,6 +6,7 @@ import Home from './component/homepage/index';
 import SnakeGame from './component/snakegame/index';
 import Lobby from './component/lobby';
 import Statistics from './component/statistics/index';
+import About from './component/about/index';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/snakegame" element={<SnakeGame />} />
           <Route path="/lobby" element={<Lobby />} />
           <Route path="/statistics" element={<Statistics />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </BrowserRouter>

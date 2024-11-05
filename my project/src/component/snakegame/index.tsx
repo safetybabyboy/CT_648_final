@@ -36,10 +36,39 @@ const SnakeGame: React.FC = () => {
   const [gameSpeed, setGameSpeed] = useState(200);
   const [elapsedTime, setElapsedTime] = useState(0);
   const [isSpeedBoosted, setIsSpeedBoosted] = useState<boolean>(false);
+  const [backgroundUrl, setBackgroundUrl] = useState(''); // เพิ่ม state สำหรับภาพพื้นหลัง
+  
   
 
   let gameInterval: any; // แก้ไขเพื่อหลีกเลี่ยงข้อผิดพลาด TypeScript
   let timerInterval: any;
+
+  const fetchRandomBackground = async () => {
+    const url = 'https://api.unsplash.com/photos/random?query=nature&client_id=Xnu4uOIiYcC1F8jkWurkOOM4SXPXuUMSmeoPe6Gg0X0';
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      setBackgroundUrl(data.urls.full); // เก็บ URL ของภาพไว้ใน state
+    } catch (error) {
+      console.error('Error fetching background image:', error);
+    }
+  };
+
+  const startGame = () => {
+    fetchRandomBackground(); // ดึงภาพใหม่ทุกครั้งที่เริ่มหรือรีสตาร์ทเกม
+    setIsPlaying(true);
+    setIsGameOver(false);
+    setScore(0); // รีเซ็ตคะแนนเมื่อเริ่มเกมใหม่
+    setGameSpeed(200); // รีเซ็ตความเร็วเมื่อเริ่มเกมใหม่
+    setElapsedTime(0); // รีเซ็ตเวลาเมื่อเริ่มเกมใหม่
+    setSnake([
+      { Xpos: 100, Ypos: 100 },
+      { Xpos: 90, Ypos: 100 },
+      { Xpos: 80, Ypos: 100 },
+    ]);
+    setApple({ Xpos: 200, Ypos: 200 });
+    setDirection('RIGHT');
+  };
 
   // จับเวลาเมื่อเกมเริ่ม
   useEffect(() => {
@@ -171,21 +200,6 @@ const SnakeGame: React.FC = () => {
     }
   };
 
-  const startGame = () => {
-    setIsPlaying(true);
-    setIsGameOver(false);
-    setScore(0); // รีเซ็ตคะแนนเมื่อเริ่มเกมใหม่
-    setGameSpeed(200); // รีเซ็ตความเร็วเมื่อเริ่มเกมใหม่
-    setElapsedTime(0); // รีเซ็ตเวลาเมื่อเริ่มเกมใหม่
-    setSnake([
-      { Xpos: 100, Ypos: 100 },
-      { Xpos: 90, Ypos: 100 },
-      { Xpos: 80, Ypos: 100 },
-    ]);
-    setApple({ Xpos: 200, Ypos: 200 });
-    setDirection('RIGHT');
-  };
-
   return (
     <div className="game-container">
       <Navbar username={username} />
@@ -194,7 +208,14 @@ const SnakeGame: React.FC = () => {
         <p>Time: {elapsedTime} seconds</p>
       </div>
 
-      <div className="game-board">
+      <div
+        className="game-board"
+        style={{
+          backgroundImage: `url(${backgroundUrl})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         {snake.map((part, index) => (
           <div
             key={index}

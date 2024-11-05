@@ -32,6 +32,13 @@ export default function Home() {
           fontSize: '18px',
           fontWeight: 'bold',
         }}>Create account</Link>
+          <Link to="/about" style={{
+          color: 'white',
+          textDecoration: 'none',
+          marginRight: '20px',
+          fontSize: '18px',
+          fontWeight: 'bold',
+        }}>About</Link>
       </nav>
 
       {/* Main Content */}
