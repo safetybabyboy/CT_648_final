@@ -115,6 +115,15 @@ export default function About() {
           >
             https://github.com/safetybabyboy/CT_648_final.git
           </a>
+          <h2>อาจารย์ที่ปรึกษา :</h2>
+          <a
+            href="https://github.com/safetybabyboy/CT_648_final.git"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#333', fontWeight: 'bold', textDecoration: 'none' }}
+          >
+            ผศ.ดร.ชัยพร เขมะภาตะพันธ์
+          </a>
         </div>
       </div>
     </>
