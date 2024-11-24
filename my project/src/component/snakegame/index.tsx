@@ -176,6 +176,7 @@ const SnakeGame: React.FC = () => {
       });
       setScore(score + 1);
       setGameSpeed((prevSpeed) => prevSpeed * 0.95); // เพิ่มความเร็วเมื่อกินแอปเปิล
+      fetchRandomBackground(); // เปลี่ยนรูปพื้นหลังเมื่อกิน
     } else {
       newSnake.pop();
     }
