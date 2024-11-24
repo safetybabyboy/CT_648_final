@@ -53,7 +53,7 @@ Statistic.init(
   },
   {
     sequelize, // เชื่อมต่อกับ instance ของ Sequelize
-    tableName: 'Statistics', // ชื่อตารางในฐานข้อมูล
+    tableName: 'ta_Statistics', // ชื่อตารางในฐานข้อมูล
     timestamps: false, // ปิดการใช้งาน createdAt และ updatedAt
   }
 );

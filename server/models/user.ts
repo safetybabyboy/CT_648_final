@@ -2,7 +2,7 @@ import { DataTypes, Op } from 'sequelize';
 import { sequelize } from '../config/db';
 
 // โมเดลผู้ใช้
-const User = sequelize.define('User', {
+const User = sequelize.define('ta_User', {
   username: {
     type: DataTypes.STRING,
     allowNull: false,
