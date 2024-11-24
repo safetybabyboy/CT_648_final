@@ -117,7 +117,7 @@ export default function About() {
           </a>
           <h2>อาจารย์ที่ปรึกษา :</h2>
           <a
-            href="https://github.com/safetybabyboy/CT_648_final.git"
+            href="https://cite.dpu.ac.th/ct/master-ct/research_chaiyaporn.html"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: '#333', fontWeight: 'bold', textDecoration: 'none' }}
